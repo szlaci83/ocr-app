@@ -62,4 +62,4 @@ typings/
 
 .angular-cli.son
 .idea/
-
+dist/
