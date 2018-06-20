@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("assets/books.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h2, h3, label, button, .btn {
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+}
+h2 {
+    font-size: 18px;
+    line-height: 26.4px;
+}
+h3{
+    font-size: 24px;
+    line-height: 18.4px;
+}
+label{
+    font-size: 15px;
+    line-height: 6.4px;
+}
+
+.btn {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+button{
+    font-size: 15px;
+    line-height: 6.4px;
+}
+
+.container {
+    margin-top: 100px;
+    background-color: rosybrown;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer-copyright {
+    background-color: lightslategray;
+    text-align: center;
+}

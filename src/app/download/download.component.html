@@ -1,0 +1,41 @@
+<h3>Download</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="form-group [h]">
+  <label for="ids">Available IDS</label>
+  <textarea type="text" class="form-control" [(ngModel)]="this.ids" id="ids" placeholder="IDS"
+            formControlName="ids">
+        </textarea>
+</div>
+
+  <div class="form-group">
+    <label for="selected">Required ID:</label>
+    <input type="text" class="form-control"  [(ngModel)]="selectedId" id="selected" placeholder="5ad3de17af2f467370706258" formControlName="selectedId">
+  </div>
+  <button type="submit" [disabled]="loading" class="btn btn-success">Download <i
+          class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+
+  <div *ngIf="error">
+    ERROR: {{this.error}}
+  </div>
+
+  <div class="form-group">
+    <label for="_id">ID:</label>
+    <textarea type="text" class="form-control" [(ngModel)]="data._id" id="_id" placeholder="" formControlName="_id">
+        </textarea>
+  </div>
+  <br>
+  <div class="form-group [h]">
+    <label for="ftext">Clear text</label>
+    <textarea type="text" class="form-control" [(ngModel)]="data.text" id="ftext" placeholder=""
+              formControlName="ftext">
+        </textarea>
+  </div>
+  <br>
+  <label class="[h]">Mapping</label>
+  <span *ngFor="let entry of data.mapping | keys">
+        {{entry.key}}, : {{entry.value}} ||
+  </span>
+  <br>
+
+  <img class="anon_img" [src]="this.image">
+</form>
